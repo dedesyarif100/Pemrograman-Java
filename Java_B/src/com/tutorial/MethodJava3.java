@@ -60,25 +60,25 @@ public class MethodJava3 {
     public static void main(String[] args) 
     {
         // Method tanpa return & tanpa parameter
-        System.out.println("\nApply Data 1");
+        System.out.println("Method tanpa return & tanpa parameter");
         Kota applyKota1 = new Kota("Surabaya", "Sidoarjo", "Gresik", "Lamongan");
         applyKota1.showKota();
 
         // Method tanpa return & dengan parameter
-        System.out.println("\nApply Data 2");
+        System.out.println("\nMethod tanpa return & dengan parameter");
         Kota applyKota2 = new Kota("Surabaya", "Sidoarjo", "Gresik", "Lamongan");
         applyKota2.setValue("SBY", "SDA", "GRK", "LMG");
         applyKota2.showKota();
 
         // Method dengan return & tanpa parameter
-        System.out.println("\nApply Data 3");
+        System.out.println("\nMethod dengan return & tanpa parameter");
         System.out.println(applyKota1.getSurabaya());
         System.out.println(applyKota1.getSidoarjo());
         System.out.println(applyKota1.getGresik());
         System.out.println(applyKota1.getLamongan());
 
         // Method dengan return & dengan parameter
-        System.out.println("\nApply Data 4");
+        System.out.println("\nMethod dengan return & dengan parameter");
         System.out.println("Tampilkan method dengan return dan dengan parameter");
         String data = applyKota1.message("Jawa Timur");
         System.out.println(data);
