@@ -50,7 +50,7 @@ class Matkul{
     }
 }
 
-public class Main2 {
+public class StaticProperty {
     public static void main(String[] args) {
         Player player1 = new Player("Dede");
         Player player2 = new Player("Hendro");

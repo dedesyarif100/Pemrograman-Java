@@ -32,7 +32,7 @@ class Display{
     }
 }
 
-public class Main{
+public class StaticMethod {
     public static void main(String[] args) {
         Display display1 = new Display("Monitor"); // new object
         display1.show();

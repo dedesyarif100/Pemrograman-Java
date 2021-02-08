@@ -3,6 +3,7 @@
 package com.tutorial;
 
 class Mahasiswa{
+    // Variabel --------------------------------------------------
     public String mahasiswa1;
     public String mahasiswa2;
     private String mahasiswa3;
@@ -11,6 +12,7 @@ class Mahasiswa{
     private double number2 = 2.5;
     private boolean bool1 = true;
 
+    // Constructor --------------------------------------------------
     Mahasiswa() {
         this.mahasiswa1 = "Dede Syarifudin";
         this.mahasiswa2 = "Rian Pratama";
@@ -18,6 +20,7 @@ class Mahasiswa{
         this.mahasiswa4 = "Trisuli";
     }
 
+    // Method --------------------------------------------------
     public void getMahasiswa(){
         System.out.println(this.mahasiswa3);
         System.out.println(this.mahasiswa4);

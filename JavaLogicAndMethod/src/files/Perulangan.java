@@ -12,16 +12,15 @@ public class Perulangan {
         }
 
         System.out.println("\nCase 1");
-        int a = 1;
-        int b = 9;
-        for (int StartOne = a; StartOne <= b; StartOne++) {
-            if (StartOne == 1 || StartOne == 2 || StartOne == 5) {
-                System.out.print(StartOne);
+        int[] number1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        for (int a = 0; a < number1.length; a++) {
+            if (number1[0] == 1 || number1[a] == 2 || number1[a] == 5) {
+                System.out.print(number1[a]);
             } else {
                 System.out.print("-");
             }
             System.out.print(", ");
-            if (StartOne == 3 || StartOne == 6) {
+            if (number1[a] == 3 || number1[a] == 6) {
                 System.out.println();
             }
         }
