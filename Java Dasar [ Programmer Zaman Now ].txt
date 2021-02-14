@@ -1,0 +1,27 @@
+Untuk me-running Java dibutuhkan Java Virtual Machine
+
+Teknologi Java :
+- Java Standard Edition : Backend, Web
+- Java Enterprise Edition : Aplikasi Enterprise
+- Java Micro Edition : Aplikasi Mobile
+
+JDK = Java Development Kit ( development aplikasi java )
+JRE = Java Runtime Environtment ( untuk merunning aplikasi kita )
+
+Java Dasar : 
+Tipedata Number : byte, short, int, long
+Tipedata Floating : float, double
+Tipedata Char = Gunakan Petik satu 'A'
+Tipedata Boolean = true, false
+Tipedata String = "Hello World"
+
+Kata Kunci Final = Untuk mengunci nilai variabel agar tidak bisa diubah-ubah (konstan)
+
+Tipedata Bukan Primitif = perbedaannya adalah Primitif diawali dengan huruf besar
+
+PR :
+Kerjakan Case Hendro
+Pahami Operator Bitwise
+Pelajari oop dari Channel Tutorial ini
+
+20 + 12 + 6 + 1
