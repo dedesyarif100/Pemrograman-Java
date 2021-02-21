@@ -1,4 +1,4 @@
-public class test {
+public class GabungkanValueArray {
     void getNumber(int numberA[], int numberB[]) {
         int saveNumber[] = new int [5];
         for (int a = 0; a < numberA.length; a++) {
@@ -18,6 +18,7 @@ public class test {
                 continue;
             } else {
                 System.out.print(saveNumber[c]);
+                if (c == 4) break;
                 System.out.print(", ");
             }
         }
@@ -25,7 +26,7 @@ public class test {
     public static void main(String[] args) {
         int numberA[] = {1, 2, 3, 4, 5};
         int numberB[] = {6, 7, 8, 9, 10};
-        test process = new test();
+        GabungkanValueArray process = new GabungkanValueArray();
         process.getNumber(numberA, numberB);
     }
 }

@@ -46,6 +46,8 @@ public class InputDataToArray {
                 System.out.print(" - ");
                 x++;
             }
+        } else if (saveData == 3) {
+            
         }
     }
     public static void main(String[] args) {
