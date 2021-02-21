@@ -16,6 +16,6 @@ public class ShapeApp {
 
         System.out.println(shape.getNameString("Surabaya", "JATIM"));
         System.out.println(rectangle.getNameString("Semarang", "JATENG"));
-        System.out.println(rectangle.getParentNameString("Surabaya", "Jakarta"));
+        System.out.println(rectangle.getParentNameString("Jakarta", "Jakarta"));
     }
 }

@@ -3,8 +3,9 @@ package SuperConstructor;
 class VicePresident extends Manager {
 
     // Super Constructor
-    VicePresident(String company){
-        super(company);
+    // Constructor ini wajib dibuat di class Child, jika tidak maka akan menyebabkan error
+    VicePresident(String name) {
+        super(name); // Keyword Super digunakan untuk memanggil field yang ada di class Parent
     }
 
     void sayHello(String name) {

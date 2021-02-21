@@ -16,7 +16,7 @@ public class App {
             } else if (result == ')') {
                 number--;
                 if (number == 0) {
-                    System.out.println(a);
+                    System.out.println("String Index Penutup = " + a);
                     break;
                 } 
             }
@@ -83,7 +83,8 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-        String data = "a (b c (d e (f) g) h) i (j k)";
+        // String data = "a (b c (d e (f) g) h) i (j k)";
+        String data = "ab (n) c d (e (f g(h i) j k) l) p q";
         int indexPembuka = 2;
         App case1 = new App();
         case1.Test(data, indexPembuka);
