@@ -1,32 +1,38 @@
 public class GabungkanValueArray {
-    void getNumber(int numberA[], int numberB[]) {
+    void getNumber(int a, int b, int numberA[], int numberB[]) {
         int saveNumber[] = new int [5];
-        for (int a = 0; a < numberA.length; a++) {
-            if (a == 0) {
-                System.out.print(numberA[a]);
-                System.out.print(", ");
+        int y = 0;
+        for (int x = 0; x < numberA.length; x++) {
+            // System.out.print(saveNumber[x]);
+            if (a <= b) {
+                saveNumber[x] = numberA[x];
+                a++; 
+                // x = 0, 1, 2, 3, 4
+                // a = 2, 3, 4, 5, 6
             } else {
-                saveNumber[a] = a;
+                if (y <= 0) {
+                    for (y = 0; y < numberB.length; y++) {
+                        System.out.print(numberB[y]);
+                        System.out.print(", ");
+                    }
+                } else {
+                    System.out.print(numberA[x]);
+                    System.out.print(", ");
+                }
             }
-        }
-        for (int b = 0; b < numberB.length; b++) {
-            System.out.print(numberB[b]);
-            System.out.print(", ");
         }
         for (int c = 0; c < saveNumber.length; c++) {
-            if (c == 0) {
-                continue;
-            } else {
-                System.out.print(saveNumber[c]);
-                if (c == 4) break;
-                System.out.print(", ");
-            }
+            if (saveNumber[c] == 0) break;
+            System.out.print(saveNumber[c]);
+            System.out.print(", ");
         }
     }
     public static void main(String[] args) {
+        int a = 2;
+        int b = 3;
         int numberA[] = {1, 2, 3, 4, 5};
         int numberB[] = {6, 7, 8, 9, 10};
         GabungkanValueArray process = new GabungkanValueArray();
-        process.getNumber(numberA, numberB);
+        process.getNumber(a, b, numberA, numberB);
     }
 }
