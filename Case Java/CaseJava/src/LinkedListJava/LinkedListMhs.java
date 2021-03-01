@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LinkedListMhs {
     int id, nim;
     String nama, jadwal, skill;
-    LinkedListMhs next; // Pointer
+    LinkedListMhs next, prev; // Pointer
 
     public static Scanner integer = new Scanner(System.in); // Input Data
     public static Scanner string = new Scanner(System.in); // Input Data
@@ -14,16 +14,16 @@ public class LinkedListMhs {
         id = integer.nextInt();
         System.out.print("Masukkan Nama           : ");
         nama = string.nextLine();
-        System.out.print("Masukkan NIM           : ");
+        System.out.print("Masukkan NIM            : ");
         nim = integer.nextInt();
-        System.out.print("Masukkan Jadwal           : ");
+        System.out.print("Masukkan Jadwal         : ");
         jadwal = string.nextLine();
-        System.out.print("Masukkan Skill           : ");
+        System.out.print("Masukkan Skill          : ");
         skill = string.nextLine();
     }
 
     public void viewData() {
-        System.out.println(" ! "+ id +" | "+ nama +" | "+ nim +" | "+ jadwal +" | "+ skill +" | ");
+        System.out.println(" | "+ id +" | "+ nama +" | "+ nim +" | "+ jadwal +" | "+ skill +" | ");
     }
 
     public static void main(String[] args) {
@@ -106,10 +106,12 @@ class LinkedList {
         }
 
         if (head == tail) {
+            System.out.println("Data "+ tail.nama +" Berhasil Dihapus");
             head = null;
             tail = null;
             System.out.println("Data Kembali Null");
         } else {
+            System.out.println("Data "+ tail.nama +" Berhasil Dihapus");
             LinkedListMhs removeLastData = head.next;
             LinkedListMhs prev = head;
             while (removeLastData != tail) {

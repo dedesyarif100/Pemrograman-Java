@@ -6,7 +6,7 @@ public class GabungkanValueArray {
             // System.out.print(saveNumber[x]);
             if (a <= b) {
                 saveNumber[x] = numberA[x];
-                a++; 
+                a++;
                 // x = 0, 1, 2, 3, 4
                 // a = 2, 3, 4, 5, 6
             } else {
