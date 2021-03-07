@@ -1,3 +1,8 @@
+/* 
+Tgl : 28 Feb 2021
+Kode Sumber : UNYDeveloperNetwork
+*/
+
 package StackJava;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -8,7 +13,7 @@ public class JavaStack {
 	private static int counters = 0;
 
 	private static boolean stackStorage() {
-		if(counters < stack.length) {
+		if (counters < stack.length) {
 			return true;
 		}
 		else {
@@ -19,14 +24,14 @@ public class JavaStack {
 	private static void createStack() {
 		int loopX = 0;
 		int alpha = 0;
-		while(loopX == 0) {
+		while (loopX == 0) {
 			System.out.print("Masukkan Data (angka): ");
 			Scanner alphaX = new Scanner(System.in);
 			try {
 				alpha = alphaX.nextInt();
 				loopX = 1;
 			}
-			catch(InputMismatchException e) {
+			catch (InputMismatchException e) {
 				System.out.println("Masukan harus berupa Angka!");
 				loopX = 0;
 			}
@@ -44,8 +49,8 @@ public class JavaStack {
 	
 	private static void displayDataStack() {
 		System.out.print("Data dalam Stack: ");
-		for(int i = 0; i < counters; i++) {
-			System.out.print(" ["+i+" => "+stack[i]+"]" );
+		for (int i = 0; i < counters; i++) {
+			System.out.print(" ["+ i +" => "+ stack[i] +"]" );
 		}
 		System.out.println("");
 	}
@@ -58,7 +63,7 @@ public class JavaStack {
 		String quitss = "y";
 		System.out.print("Keluar dari Program? (Y/T): ");
 		quitss = new Scanner(System.in).nextLine();
-		if(quitss.equalsIgnoreCase("y")) {
+		if (quitss.equalsIgnoreCase("y")) {
 			System.exit(0);
 		}
 		else {
@@ -67,10 +72,10 @@ public class JavaStack {
 	}
 	
 	private static void menuChooser(int choosenMenu) {
-		switch(choosenMenu) {
+		switch (choosenMenu) {
 			case 1:
 				boolean check = stackStorage();
-				if(check) {
+				if (check) {
                     createStack();
 				}
 				else {
@@ -101,7 +106,7 @@ public class JavaStack {
 	private static void menuProgram() {
 		int loopX = 0;
 		int choosenMenu = 0;
-		while(loopX == 0) {
+		while (loopX == 0) {
 			System.out.println("\nContoh Program Stack dengan Java");
 			System.out.println("Menu: ");
 			System.out.println("1. Tambah Stack");
@@ -115,7 +120,7 @@ public class JavaStack {
 			try {
 				choosenMenu = menuOption.nextInt();
 				loopX = 1;
-			}catch(InputMismatchException e) {
+			} catch (InputMismatchException e) {
 				System.out.println("Masukan harus Angka!");
 			}
 		}

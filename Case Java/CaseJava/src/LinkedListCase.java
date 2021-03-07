@@ -6,36 +6,54 @@ public class LinkedListCase {
     LinkedListCase next;
     public static Scanner in = new Scanner(System.in);
     public static Scanner str = new Scanner(System.in);
-    public void input(){
-        System.out.print("Masukkan id               : ");
-        id = in.nextInt();
-        System.out.print("Masukkan Nama             : ");
-        nama = str.nextLine();
-        System.out.print("Masukkan Kelas            : ");
-        kelas = str.nextLine();
-        System.out.print("Masukkan Jadwal LinkedListCase : ");
-        jadwal = str.nextLine();
-        System.out.print("Masukkan Jumlah Modul     : ");
-        modul = in.nextInt();
+    public static Scanner inputDummy = new Scanner(System.in);
+
+    public void input(int jumlahData) {
+        // System.out.print("Masukkan id               : ");
+        // in.useRadix(jumlahData);
+        for (int c = 1; c <= jumlahData; c++) {
+            id = c;
+            nama = "Data";
+            kelas = "Data";
+            jadwal = "Data";
+            modul = c;
+        }
+        // id = in.nextInt();
+        // System.out.print("Masukkan Nama             : ");
+        // nama = str.nextLine();
+        // System.out.print("Masukkan Kelas            : ");
+        // kelas = str.nextLine();
+        // System.out.print("Masukkan Jadwal LinkedListCase : ");
+        // jadwal = str.nextLine();
+        // System.out.print("Masukkan Jumlah Modul     : ");
+        // modul = in.nextInt();
         // next = null;
     }
-    public void view(LinkedListCase ptr) {
-        System.out.println("| "+id+" | "+nama+" | "+kelas+" | "+jadwal+" | "+modul+" |");
-        // System.out.println(ptr);
+    public void view(LinkedListCase pointer) {
+        System.out.println("| " + pointer.id + " | " + pointer.nama + " | " + pointer.kelas + " | " + pointer.jadwal + " | " + pointer.modul + " |");
+        // System.out.println(pointer.id);
     }
     public static void main(String[] args) {
         // TODO code application logic here
         int menu = 0, del;
+        int saveDummy;
+        int jumlahData = 1;
         linkedlist ll = new linkedlist();
+
         while (menu != 4){
             System.out.print("1.Input\n2.View\n3.Delete\n4.Exit\n : ");
             menu = in.nextInt();
             if (menu == 1) {
-                ll.add();
+                System.out.print("Input Data Dummy = ");
+                saveDummy = inputDummy.nextInt();
+                for (jumlahData = 1; jumlahData <= saveDummy; jumlahData++) {
+                    ll.add(jumlahData, saveDummy);
+                }
             } else if (menu == 2) {
-                ll.view();
+                ll.view(jumlahData);
             } else if (menu == 3) {
-                System.out.print("1.Data Pertama\n2.Data Terkahir\n : ");
+                System.out.print("1.Data Pertama\n2.Data Terkahir : \n");
+                System.out.print("Pilih Nomor : ");
                 del = in.nextInt();
                 if (del == 1) {
                     ll.removeFirst();
@@ -61,31 +79,60 @@ class linkedlist{
         head = null;
         tail = null;
     }
-    public void add() {
+    public void add( int jumlahData, int saveDummy ) {
         LinkedListCase baru = new LinkedListCase();
-        baru.input();
+        baru.input(jumlahData);
+        
         if (head == null) {
             head = baru;
-            System.out.println(head);
+            System.out.println("Data ID " + head.id + " berhasil disimpan");
         } else {
             tail.next = baru;
-            System.out.println(tail.next);
+            System.out.println("Data ID " + tail.next.id + " berhasil disimpan");
         }
         tail = baru;
-        System.out.println(tail);
+        // System.out.println(tail);
     }
-    public void view() {
+    public void view(int jumlahData) {
         if (head == null) {
             System.out.println("Data Masih Kosong");
             return;
+
+            // -------------------------------------------------------------------------------------
+            // LinkedListCase pointer = head;
+            // System.out.println("| Id | Modul |");
+            // System.out.println("--------------");
+            // while (jumlahData < saveDummy) {
+            //     System.out.println("| " + idDummy + " | " + modulDummy + " |");
+            //     idDummy++;
+            //     modulDummy++;
+            //     jumlahData++;
+            // }
+            // System.out.println("\nJumlah Data = " + jumlahData);
+            // jumlahData = jumlahData / 2;
+            // System.out.println("\n| " + jumlahData + " | " + jumlahData + " |");
+            // idDummy = 1;
+            // modulDummy = 1;
+            // jumlahData = 0;
         } else {
+            jumlahData = 0;
             System.out.println("| Id | Nama | Kelas | Jadwal | Modul |");
             System.out.println("--------------------------------------");
-            LinkedListCase ptr = head;
-            while (ptr != null) {
-                ptr.view(ptr);
-                ptr = ptr.next;
+            LinkedListCase pointer = head;
+            while (pointer != null) {
+                pointer.view(pointer);
+                jumlahData++;
+                pointer = pointer.next;
             }
+            System.out.println("Jumlah Data = " + jumlahData);
+            jumlahData = jumlahData / 2;
+            pointer = head;
+            for (int b = 1; b <= jumlahData - 1; b++) {
+                pointer = pointer.next;
+            }
+            // pointer.id = jumlahData;
+            pointer.view(pointer);
+            jumlahData = 0;
         }
     }
     public void removeFirst() {
@@ -108,20 +155,14 @@ class linkedlist{
             tail = null;
             System.out.println("Data Kembali Null");
         } else {
-            LinkedListCase ptr = head.next;
+            LinkedListCase pointer = head.next;
             LinkedListCase prev = head;
-            while (ptr != tail) {
-                ptr = ptr.next;
+            while (pointer != tail) {
+                pointer = pointer.next;
                 prev = prev.next;
-                System.out.println(ptr.id);
-                System.out.println(tail.id);
             }
-            System.out.println(prev.next.id);
-            System.out.println(tail.id);
             prev.next = null;
             tail = prev;
-            System.out.println("Done move : " + prev.next.id);
-            System.out.println("Done move : " + tail.id);
         }
     }
 }
