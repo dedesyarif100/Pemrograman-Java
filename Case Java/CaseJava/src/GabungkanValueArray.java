@@ -1,38 +1,114 @@
+import java.util.Scanner;
+
 public class GabungkanValueArray {
     void getNumber(int a, int b, int numberA[], int numberB[]) {
-        int saveNumber[] = new int [5];
+        int x = 0;
         int y = 0;
-        for (int x = 0; x < numberA.length; x++) {
-            // System.out.print(saveNumber[x]);
-            if (a <= b) {
-                saveNumber[x] = numberA[x];
-                a++;
-                // x = 0, 1, 2, 3, 4
-                // a = 2, 3, 4, 5, 6
+        int saveRange[] = new int [5];
+        int saveNumberA[] = new int [5];
+        boolean applyDataB = true;
+        for (int applyNumberA = 1; applyNumberA <= numberA.length; applyNumberA++) {
+            // if (applyNumberA == 4) {
+            //     System.out.println("Cek saja");
+            // }
+            if (applyNumberA < a) {
+                System.out.print(numberA[applyNumberA - 1]);
+                System.out.print(", ");
             } else {
-                if (y <= 0) {
-                    for (y = 0; y < numberB.length; y++) {
-                        System.out.print(numberB[y]);
-                        System.out.print(", ");
-                    }
+                if (a <= b) {
+                    saveRange[x] = numberA[a - 1];
+                    a++;
+                    x++;
                 } else {
-                    System.out.print(numberA[x]);
-                    System.out.print(", ");
+                    // if (applyNumberA == 4) {
+                    //     System.out.println(applyNumberA);
+                    // }
+                    saveNumberA[y] = numberA[applyNumberA - 1];
+                    y++;
+                    // if (applyNumberA == 4) {
+                    //     System.out.println("Cek saja 3");
+                    // }
                 }
             }
         }
-        for (int c = 0; c < saveNumber.length; c++) {
-            if (saveNumber[c] == 0) break;
-            System.out.print(saveNumber[c]);
+
+        for (int n = 0; n < numberB.length; n++) {
+            System.out.print(numberB[n]);
             System.out.print(", ");
         }
+        for (int applyValueA = 0; applyValueA < saveNumberA.length; applyValueA++) {
+            if (saveNumberA[applyValueA] == 0) {
+                break;
+            }
+            System.out.print(saveNumberA[applyValueA]);
+            System.out.print(", ");
+        }
+        System.out.print("Range : ");
+        for (int applyRangeA = 0; applyRangeA < saveRange.length; applyRangeA++) {
+            if (saveRange[applyRangeA] == 0) {
+                break;
+            }
+            System.out.print(saveRange[applyRangeA]);
+            System.out.print(", ");
+        }
+            // if (a <= b) {
+            //     saveNumber[x] = numberA[a - 1];
+            //     a++;
+            //     // x = 0, 1, 2, 3, 4
+            //     // a = 2, 3, 4, 5, 6
+            // } else {
+            //     if (y <= 0) {
+            //         for (y = 0; y < numberB.length; y++) {
+            //             System.out.print(numberB[y]);
+            //             System.out.print(", ");
+            //         }
+            //     } else {
+            //         System.out.print(numberA[x]);
+            //         System.out.print(", ");
+            //     }
+            // }
+        
+        
+        
+        // for (int c = 0; c < saveNumber.length; c++) {
+        //     if (saveNumber[c] == 0) break;
+        //     System.out.print(saveNumber[c]);
+        //     System.out.print(", ");
+        // }
     }
     public static void main(String[] args) {
-        int a = 2;
-        int b = 3;
         int numberA[] = {1, 2, 3, 4, 5};
         int numberB[] = {6, 7, 8, 9, 10};
-        GabungkanValueArray process = new GabungkanValueArray();
-        process.getNumber(a, b, numberA, numberB);
+
+        
+        Scanner rangeA = new Scanner(System.in);
+        Scanner rangeB = new Scanner(System.in);
+
+        System.out.print("Input Range A : ");
+
+        if (!rangeA.hasNextInt()) {
+            System.out.println("INPUTAN HARUS ANGKA");
+        }
+        System.out.print("Input Range A : ");
+        if (!rangeB.hasNextInt()) {
+            System.out.println("INPUTAN HARUS ANGKA");
+        }
+        else {
+            int a = rangeA.nextInt();
+            int b = rangeB.nextInt();
+            if (a >= 5 && b >= 5) {
+                System.out.println("DATA A DAN B TIDAK BOLEH LEBIH DARI 5");
+            } else if (a >= 5) {
+                System.out.println("DATA A TIDAK BOLEH LEBIH DARI 5");
+            } else if (b >= 5) {
+                System.out.println("DATA B TIDAK BOLEH LEBIH DARI 5");
+            } else if (a > b) {
+                System.out.println("DATA A HARUS LEBIH KECIL DARI DATA B");
+            } else {
+                GabungkanValueArray process = new GabungkanValueArray();
+                process.getNumber(a, b, numberA, numberB);
+            }
+        }
+        
     }
 }
