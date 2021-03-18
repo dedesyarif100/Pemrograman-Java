@@ -11,7 +11,7 @@ public class LinkedListCase {
     public void input(int jumlahData) {
         // System.out.print("Masukkan id               : ");
         // in.useRadix(jumlahData);
-        for (int c = 1; c <= jumlahData; c++) {
+        for (int c = jumlahData; c <= jumlahData; c++) {
             id = c;
             nama = "Data";
             kelas = "Data";
@@ -29,7 +29,7 @@ public class LinkedListCase {
         // modul = in.nextInt();
         // next = null;
     }
-    public void view(LinkedListCase pointer) {
+    public void viewData(LinkedListCase pointer) {
         System.out.println("| " + pointer.id + " | " + pointer.nama + " | " + pointer.kelas + " | " + pointer.jadwal + " | " + pointer.modul + " |");
         // System.out.println(pointer.id);
     }
@@ -41,7 +41,8 @@ public class LinkedListCase {
         linkedlist ll = new linkedlist();
 
         while (menu != 4){
-            System.out.print("1.Input\n2.View\n3.Delete\n4.Exit\n : ");
+            System.out.print("1.Input\n2.View\n3.Delete\n4.Exit\n");
+            System.out.print("Input Pilihan : ");
             menu = in.nextInt();
             if (menu == 1) {
                 System.out.print("Input Data Dummy = ");
@@ -120,7 +121,7 @@ class linkedlist{
             System.out.println("--------------------------------------");
             LinkedListCase pointer = head;
             while (pointer != null) {
-                pointer.view(pointer);
+                pointer.viewData(pointer);
                 jumlahData++;
                 pointer = pointer.next;
             }
@@ -131,7 +132,7 @@ class linkedlist{
                 pointer = pointer.next;
             }
             // pointer.id = jumlahData;
-            pointer.view(pointer);
+            pointer.viewData(pointer);
             jumlahData = 0;
         }
     }

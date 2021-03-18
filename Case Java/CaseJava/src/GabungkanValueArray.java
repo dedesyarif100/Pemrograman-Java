@@ -51,30 +51,6 @@ public class GabungkanValueArray {
             System.out.print(saveRange[applyRangeA]);
             System.out.print(", ");
         }
-            // if (a <= b) {
-            //     saveNumber[x] = numberA[a - 1];
-            //     a++;
-            //     // x = 0, 1, 2, 3, 4
-            //     // a = 2, 3, 4, 5, 6
-            // } else {
-            //     if (y <= 0) {
-            //         for (y = 0; y < numberB.length; y++) {
-            //             System.out.print(numberB[y]);
-            //             System.out.print(", ");
-            //         }
-            //     } else {
-            //         System.out.print(numberA[x]);
-            //         System.out.print(", ");
-            //     }
-            // }
-        
-        
-        
-        // for (int c = 0; c < saveNumber.length; c++) {
-        //     if (saveNumber[c] == 0) break;
-        //     System.out.print(saveNumber[c]);
-        //     System.out.print(", ");
-        // }
     }
     public static void main(String[] args) {
         int numberA[] = {1, 2, 3, 4, 5};

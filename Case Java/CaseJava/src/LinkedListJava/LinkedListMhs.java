@@ -28,7 +28,7 @@ public class LinkedListMhs {
 
     public static void main(String[] args) {
         int menu = 0, delete;
-        LinkedList inputMenu = new LinkedList();
+        LinkedList inputMenu = new LinkedList(); // Instansiasi Object dari nama Class
         while (menu != 4) {
             System.out.print("1.Input\n2.View\n3.Delete\n4.Exit\n : ");
             System.out.print("Masukkan Menu = ");
@@ -59,7 +59,7 @@ public class LinkedListMhs {
 
 class LinkedList {
     LinkedListMhs head, tail;
-    public LinkedList() {
+    public LinkedList() { // Constructor
         head = null;
         tail = null;
     }

@@ -1,0 +1,145 @@
+import java.util.Scanner;
+
+public class GabunganLinkedList {
+    int data_a, data_b;
+    GabunganLinkedList next, prev;
+    GabunganLinkedList head, tail;
+    public static Scanner integer = new Scanner(System.in); // Input Data
+    public static Scanner inputDummySatu = new Scanner(System.in);
+    public static Scanner inputDummyDua = new Scanner(System.in);
+
+    public void inputDataDummySatu(int jumlahData) {
+        // for (int c = jumlahData; c <= jumlahData; c++) {
+        //     data_a = c;
+        // }
+        data_a = jumlahData;
+    }
+
+    public void inputDataDummyDua(int jumlahData) {
+        // for (int d = jumlahData; d <= jumlahData; d++) {
+        //     data_b = d;
+        // }
+        data_b = jumlahData;
+    }
+
+    public void viewData(GabunganLinkedList pointer) {
+        // if (pointer.data_a != null) {
+        //     System.out.print("| " + pointer.data_a + " |");
+        // } else {
+        //     System.out.print("| " + pointer.data_b + " |");
+        // }
+        System.out.print("| " + pointer.data_a + " |");
+    }
+
+    public static void main(String[] args) {
+        int menu = 0;
+        int jumlahInputDataDummyA = 1;
+        int jumlahInputDataDummyB = 1;
+        int jumlahData = 1;
+
+        ApplyGabunganLinkedList LinkedListA = new ApplyGabunganLinkedList();
+        ApplyGabunganLinkedList LinkedListB = new ApplyGabunganLinkedList(); // Beda Alamat Memory
+
+
+        // LinkedListA.next = new ApplyGabunganLinkedList();
+        // LinkedListA.next.next = new ApplyGabunganLinkedList();
+        
+        while (menu != 4) {
+            System.out.print("1.Input\n2.View\n3.Delete\n4.Exit\n");
+            System.out.print("Masukkan Menu = ");
+            menu = integer.nextInt();
+            if (menu == 1) {
+                System.out.print("Input Data Dummy 1 = ");
+                jumlahInputDataDummyA = inputDummySatu.nextInt();
+                System.out.println();
+
+                System.out.println("Input Data 1 : ");
+                for (jumlahData = 1; jumlahData <= jumlahInputDataDummyA; jumlahData++) {
+                    LinkedListA.addDummy(jumlahData);
+                }
+
+                jumlahData = 1;
+                System.out.print("Input Data Dummy 2 = ");
+                jumlahInputDataDummyB = inputDummyDua.nextInt();
+                System.out.println();
+
+                System.out.println("Input Data 2 : ");
+                for (jumlahData = 1; jumlahData <= jumlahInputDataDummyB; jumlahData++) {
+                    LinkedListB.addDummy(jumlahData);
+                }
+                
+                System.out.println();
+            } else if (menu == 2) {
+                System.out.println();
+                LinkedListB.view(jumlahData, jumlahInputDataDummyA, jumlahInputDataDummyB);
+            } else {
+                System.out.println("\nPILIHAN MENU HANYA 1 - 4 !!!\n");
+            }
+        }
+    }
+}
+
+class ApplyGabunganLinkedList {
+    ApplyGabunganLinkedList head, tail, next, prev, addData; // Type Object
+    int data;
+    ApplyGabunganLinkedList() {
+        // dataBaruSatu = new GabunganLinkedList();
+        // dataBaruDua = new GabunganLinkedList();
+        head = null;
+        tail = null;
+    }
+
+    public void addData() {
+        
+    }
+
+    public void addDummy( int data ) {
+        data = data;
+        if (head == null) {
+            head = this;
+        }
+        // dataBaruSatu.inputDataDummySatu(jumlahData);
+        // if (head == null) {
+        //     head = dataBaruSatu;
+        //     System.out.println("Data ID " + head.data_a + " berhasil disimpan");
+        // } else {
+        //     // tail.next = dataBaruSatu;
+        //     System.out.println("Data ID " + tail.next.data_a + " berhasil disimpan");
+        // }
+        // tail = dataBaruSatu;
+    }
+
+    // public void addDummy2( int jumlahData, int jumlahInputDataDummyB ) {
+    //     // GabunganLinkedList dataBaruDua = new GabunganLinkedList();
+    //     // dataBaruDua.inputDataDummyDua(jumlahData);
+    //     if (head == null) {
+    //         // head = dataBaruDua;
+    //         System.out.println("Data ID " + head.data_b + " berhasil disimpan");
+    //     } else {
+    //         // tail.next = dataBaruDua;
+    //         System.out.println("Data ID " + tail.next.data_b + " berhasil disimpan");
+    //         System.out.println("head == null");
+    //     }
+    //     // tail = dataBaruDua;
+    // }
+
+    public void view( int jumlahData, int jumlahInputDataDummyA, int jumlahInputDataDummyB ) {
+        if (head == null) {
+            System.out.println("Data Masih Kosong\n");
+            return;
+        } else {
+            jumlahData = 0;
+            GabunganLinkedList pointer = head;
+            GabunganLinkedList applyLinkedList_1 = head;
+            int viewData = 1;
+
+            System.out.println("View : ");
+            while (pointer != null) {
+                applyLinkedList_1.viewData(pointer);
+                jumlahData++;
+                pointer = pointer.next;
+            }
+            System.out.println("\n");
+        }
+    }
+}
