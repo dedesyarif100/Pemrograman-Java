@@ -1,5 +1,5 @@
 // Method ---------------------------------------------------------
-package com.tutorial;
+// package com.tutorial;
 
 class Buah {
     String apel;

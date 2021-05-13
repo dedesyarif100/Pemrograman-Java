@@ -1,4 +1,4 @@
-package files;
+// package files;
 
 public class StringMethod {
     public static void main(String[] args) {

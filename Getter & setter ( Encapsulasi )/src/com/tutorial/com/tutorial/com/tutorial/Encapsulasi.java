@@ -23,16 +23,8 @@ class DataNumber {
         this.tenPrivate = 10;
     }
 
-    // Access Modifier --------------------------------------------
-    public void displayPrivate() { 
-        System.out.println("six Private : " + this.sixPrivate);
-        System.out.println("seven Private : " + this.sevenPrivate);
-        System.out.println("eight Private : " + this.eightPrivate);
-        System.out.println("nine Private : " + this.ninePrivate);
-        System.out.println("ten Private : " + this.tenPrivate);
-    }
-
     // Getter -----------------------------------------------------
+    // Setiap Method yang diberi type data khusus, di dalamnya wajib melakukan return jika akan menampilkan property
     public int getSixPrivate() {
         return this.sixPrivate;
     }
@@ -51,6 +43,15 @@ class DataNumber {
 
     public int getTenPrivate() {
         return this.tenPrivate;
+    }
+
+    // Access Modifier --------------------------------------------
+    public void displayPrivate() {
+        System.out.println("six Private : " + this.sixPrivate);
+        System.out.println("seven Private : " + this.sevenPrivate);
+        System.out.println("eight Private : " + this.eightPrivate);
+        System.out.println("nine Private : " + this.ninePrivate);
+        System.out.println("ten Private : " + this.tenPrivate);
     }
 
     // Setter -----------------------------------------------------

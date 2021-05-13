@@ -1,4 +1,4 @@
-package Abstract.data;
+package Abstract.application;
 
 public class City extends Location {
     

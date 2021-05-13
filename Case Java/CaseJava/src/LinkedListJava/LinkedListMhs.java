@@ -29,12 +29,13 @@ public class LinkedListMhs {
     public static void main(String[] args) {
         int menu = 0, delete;
         LinkedList inputMenu = new LinkedList(); // Instansiasi Object dari nama Class
-        while (menu != 4) {
+        while (menu != 4 && menu <= 4) {
             System.out.print("1.Input\n2.View\n3.Delete\n4.Exit\n : ");
             System.out.print("Masukkan Menu = ");
             menu = integer.nextInt();
             if (menu == 1) {
                 inputMenu.add();
+                System.out.println("Tambah Data Selesai");
             } else if (menu == 2) {
                 inputMenu.view();
             } else if (menu == 3) {

@@ -2,32 +2,32 @@
 
 package com.tutorial;
 
-class Display{
+class Display {
     // sesuatu yang berhubungan dengan static, akan menempel ke classnya
     public static String type = "Ini type"; // static variabel
     public static String kata = "Ini kata"; // static variabel
     public static int number;
     private String name; // dynamic variabel
 
-    Display(String name){
+    Display(String name) {
         this.name = name;
     }
 
-    void setType(String typeInput){
+    void setType(String typeInput) {
         // type = typeInput;  // alternatif 1
         // this.type = typeInput;  // alternatif 2
         Display.type = typeInput;  // alternatif 3
     }
 
-    void setKata(String kataInput){
+    void setKata(String kataInput) {
         kata = kataInput;
     }
 
-    void setNumber(int numberInput){
+    void setNumber(int numberInput) {
         number = numberInput;
     }
 
-    void show(){
+    void show() {
         System.out.println("Display name = " + this.name);
     }
 }

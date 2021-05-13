@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Java">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JavaLatihan1.zip!/" />
+      <root url="jar://$PROJECT_DIR$/JavaLogicAndMethod.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

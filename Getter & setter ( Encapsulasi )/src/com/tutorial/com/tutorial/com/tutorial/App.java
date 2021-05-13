@@ -8,54 +8,54 @@ class Data {
     private double doublePrivate;
 
     // constructor dari class Data
-    public Data(){
+    public Data() {
         this.intPublic = 5;
         this.intPrivate = 7;
     }
 
     // constructor dari class Data
-    public void display(){
+    public void display() {
         System.out.println("variabel intPublic = " + this.intPublic);
         System.out.println("variabel intPrivate = " + this.intPrivate);
         System.out.println("variabel doublePrivate = " + this.doublePrivate); // 0.05
     }
 
     // getter
-    public int getIntPrivate(){
+    public int getIntPrivate() {
         return this.intPrivate;
     }
 
     // setter
-    public void setDoublePrivate(double value){
+    public void setDoublePrivate(double value) {
         this.doublePrivate = value;
     }
 }
 
-class Lingkaran{
+class Lingkaran {
     private double diameter;
 
     // constructor dari class Lingkaran
-    public Lingkaran(double diameter){
+    public Lingkaran(double diameter) {
         this.diameter = diameter;
     }
 
     // setter
-    public void setJari2(double jari2){
+    public void setJari2(double jari2) {
         this.diameter = jari2 * 2;
     }
 
     // getter
-    public double getJari2(){
+    public double getJari2() {
         return this.diameter / 4;
     }
 
     // getter
-    public double getLuas(){
+    public double getLuas() {
         return 3.14 * diameter * diameter / 4;
     }
 }
 
-public class Main{
+public class App {
     public static void main(String[] args) {
         Data object = new Data();
         // read and write dengan menggunakan public

@@ -1,4 +1,4 @@
-package Polimorfisme;
+
 
 class VicePresident extends Manager {
 

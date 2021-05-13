@@ -1,4 +1,4 @@
-package SuperConstructor;
+// package SuperConstructor;
 
 public class Manager {
     String name;

@@ -3,7 +3,7 @@ public class App {
         // membuat objek bangun datar
         BangunDatar bangunDatar = new BangunDatar();
         
-        // membuat objek persegi dan mengisi nilai properti
+        // membuat objek persegi dan mengisi nilai properti 
         Persegi persegi = new Persegi();
         persegi.sisi = 2;
         

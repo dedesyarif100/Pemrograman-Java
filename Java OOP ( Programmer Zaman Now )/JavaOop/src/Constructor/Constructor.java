@@ -1,4 +1,4 @@
-package Constructor;
+// package Constructor;
 
 public class Constructor {
     public static void main(String[] args) {
@@ -21,9 +21,9 @@ public class Constructor {
         Person person3;
         person3 = new Person();
         person3.name = "Hendro"; // Mengubah nilai field
-        person3.address = "Jakarta";
-        person3.age = 22;
-        person3.status = false;
+        person3.address = "Jakarta"; // Mengubah nilai field
+        person3.age = 22; // Mengubah nilai field
+        person3.status = false; // Mengubah nilai field
         person3.sayHello("Elok", "Malang");
     }
 }

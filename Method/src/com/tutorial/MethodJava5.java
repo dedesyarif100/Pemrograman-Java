@@ -1,4 +1,4 @@
-package com.tutorial;
+// package com.tutorial;
 
 class TypeData {
     int[] number1;

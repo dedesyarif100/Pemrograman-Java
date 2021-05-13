@@ -17,11 +17,11 @@ public class DoubleLinkedList {
         // int enterData = enter.nextInt();
 
         ClassDoubleLinkedList current = DoubleLinkedList.head;
-        int x = 1;
+        // int x = 1;
         // for (int a = 1; a <= jumlahData; a++) {
         //     current = current.next;
         // }
-
+        // System.out.println(current.next.data);
         // System.out.println(current.getPrev().data);
         while (current != null) {
             // if (x == enterData) {
@@ -74,7 +74,7 @@ class ClassDoubleLinkedList {
         if (head == null) {
             ClassDoubleLinkedList temp = new ClassDoubleLinkedList(data);
             head = temp;
-            prev = null;
+            // prev = null;
         } else if (head != null) {
             ClassDoubleLinkedList temp2 = head;
             // int x = 1;
@@ -85,7 +85,7 @@ class ClassDoubleLinkedList {
                 temp2 = temp2.getNext();
                 // x++;
             }
-            
+
             ClassDoubleLinkedList temp = new ClassDoubleLinkedList(data);
             temp2.next = temp;
             temp.prev = temp2;

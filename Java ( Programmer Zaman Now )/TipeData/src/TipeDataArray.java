@@ -25,7 +25,7 @@ public class TipeDataArray {
         System.out.println(namaNama[1]);
         System.out.println(namaNama[2]);
 
-        int[] arrayInt = new int[]{
+        int[] arrayInt = new int[] {
             1,2,3,4,5,6,7,8,9,10
         };
 

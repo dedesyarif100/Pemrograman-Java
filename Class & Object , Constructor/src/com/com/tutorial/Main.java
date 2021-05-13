@@ -8,7 +8,6 @@ class Mahasiswa {
     double IPK;
     int umur;
 
-
     // Constructor adalah fungsi yang dijalankan saat pertama kali object dibuat
     // Mahasiswa() {
     //     System.out.println("Ini adalah constructor");

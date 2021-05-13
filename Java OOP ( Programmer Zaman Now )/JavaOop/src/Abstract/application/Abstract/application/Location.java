@@ -1,4 +1,4 @@
-package Abstract.data;
+package Abstract.application;
 
 // Abstract Class tidak bisa menginstansiasi Object
 // Jika ingin menginstansiasi Object, harus dari class turunannya sendiri

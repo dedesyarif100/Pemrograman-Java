@@ -1,4 +1,4 @@
-package files;
+// package files;
 
 public class MathMethod {
     public static void main(String[] args) {

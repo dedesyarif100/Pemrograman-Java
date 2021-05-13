@@ -1,36 +1,36 @@
 Object Oriented Programming Java (Programmer Zaman Now) :
-1. Class
-2. Object
-3. Field
-4. Method
-5. Constructor
-6. Constructor Overloading
-7. Variabel Shadowing
-8. This Keyword
-9. Inheritance
-10. Method Overriding
-11. Super Keyword
-12. Super Constructor
-13. Object Class
-14. Polymorphism
-15. Type Check dan Casts
-16. Variable Hiding
-17. Package
-18. Access Modifier
-19. Import
-20. Abstract Class
-21. Abstract Method
-22. Getter dan Setter
-23. Interface
-24. Interface Inheritance
-25. Default Method
-26. toString() Method
+1. Class - v
+2. Object - v
+3. Field - v
+4. Method - v
+5. Constructor - v
+6. Constructor Overloading - v
+7. Variabel Shadowing - v
+8. This Keyword - v
+9. Inheritance - v
+10. Method Overriding - v
+11. Super Keyword - v
+12. Super Constructor - v
+13. Object Class - v
+14. Polymorphism - v
+15. Type Check dan Casts - v
+16. Variable Hiding - v
+17. Package - v
+18. Access Modifier - v
+19. Import - v
+20. Abstract Class - v
+21. Abstract Method - v
+22. Getter dan Setter - v
+23. Interface - v
+24. Interface Inheritance - v
+25. Default Method - v
+26. toString() Method - v
 27. equals() Method
 28. hashCode() Method
-29. Final Class
-30. Final Method
-31. Inner Class
-32. Anonymous Class
+29. Final Class - v
+30. Final Method - v
+31. Inner Class - v
+32. Anonymous Class - v
 33. static Keyword
 34. Record Class
 35. Enum Class

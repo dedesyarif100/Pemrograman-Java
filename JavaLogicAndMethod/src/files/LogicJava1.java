@@ -1,9 +1,10 @@
-package files;
+// package files;
+// import java.util.Scanner;
 
 public class LogicJava1 {
     public static void main(String[] args) {
         System.out.println("Logic Perulangan For");
-        for (int a = 0; a <= 10; a++){
+        for (int a = 0; a <= 10; a++) {
             System.out.print(a);
             if (a == 10) break;
             System.out.print(", ");
@@ -101,5 +102,30 @@ public class LogicJava1 {
         int angkaInt1 = (int) angkaKoma1;
         System.out.println(angkaKoma1);
         System.out.println(angkaInt1);
+
+        int[][] variabelN = {{10, 20, 30, 40}, {50, 60, 70, 80, 90, 100}, {110, 120, 130, 140}};
+        for (int n = 0; n < variabelN.length; n++) {
+            for (int m = 0; m < variabelN[n].length; m++) {
+                if (variabelN[n][m] >= 40 && variabelN[n][m] < 70) {
+                    System.out.print(" 1, ");
+                } else {
+                    System.out.print(variabelN[n][m] + ", ");
+                }
+            }
+        }
+        System.out.println();
+        int[][] board = new int[4][4];
+        for (int row = 0; row < board.length; row++) {
+            for (int col = 0; col < board[row].length; col++) {
+                board[row][col] = row * col;
+                System.out.print(board[row][col] + "\t");
+            }
+            System.out.println();
+        }
+        // int m = 0;
+        // while (m < variabelN.length) {
+        //     System.out.print(variabelN[m] + ", ");
+        //     m++;
+        // }
     }
 }

@@ -3,7 +3,7 @@ public class PersegiPanjang extends BangunDatar {
     float lebar;
 
     @Override
-    float luas(){
+    float luas() {
         float luas = panjang * lebar;
         System.out.println("Luas Persegi Panjang:" + luas);
         return luas;
@@ -11,7 +11,7 @@ public class PersegiPanjang extends BangunDatar {
 
     @Override
     float keliling() {
-        float kll = 2*panjang + 2*lebar;
+        float kll = (2 * panjang) + (2 * lebar);
         System.out.println("Keliling Persegi Panjang: " + kll);
         return kll;
     }

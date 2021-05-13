@@ -8,15 +8,19 @@ public class MethodVariabelArguments {
 
     static void sayCongrats(String name, int... values) {
         var total = 0;
-        for (var value : values) {
+        for (var value : values) 
+        {
             total = total + value;
         }
 
         var finalValue = total / values.length;
         System.out.println("Nilai anda " + finalValue);
-        if (finalValue >= 75) {
+        if (finalValue >= 75) 
+        {
             System.out.println("Selamat " + name + ", anda lulus");
-        } else {
+        } 
+        else 
+        {
             System.out.println("Maaf " + name + ", anda tidak lulus");
         }
     }

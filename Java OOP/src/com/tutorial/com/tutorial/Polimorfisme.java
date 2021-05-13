@@ -1,33 +1,33 @@
 // Polimorfisme ---------------------------------
 package com.tutorial;
 
-class Mahasiswa {
+class Mahasiswa1 {
     void maba() {
         System.out.println("Ini maba");
     }
 }
 
-class Universitas extends Mahasiswa {
+class Universitas extends Mahasiswa1 {
     void maba() {
         System.out.println("Ini bukan maba");
     }
 }
 
-class Kampus extends Mahasiswa {
+class Kampus extends Mahasiswa1 {
     void maba() {
-        System.out.println("Ini mahasiswa lama");
+        System.out.println("Ini Mahasiswa1 lama");
     }
 }
 
 public class Polimorfisme {
     public static void main(String[] args) {
-        Mahasiswa mahasiswa = new Mahasiswa();
-        mahasiswa.maba();
+        Mahasiswa1 Mahasiswa1 = new Mahasiswa1();
+        Mahasiswa1.maba();
         
-        Mahasiswa universitas = new Universitas();
+        Mahasiswa1 universitas = new Universitas();
         universitas.maba();
         
-        Mahasiswa kampus = new Kampus();
+        Mahasiswa1 kampus = new Kampus();
         kampus.maba();
     }    
 }

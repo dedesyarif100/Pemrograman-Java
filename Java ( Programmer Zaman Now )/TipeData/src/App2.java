@@ -1,6 +1,6 @@
 import org.w3c.dom.TypeInfo;
 
-public class App {
+public class App2 {
     public static void main(String[] args) throws Exception {
         byte initByte = 100;
         short iniShort = 1000;

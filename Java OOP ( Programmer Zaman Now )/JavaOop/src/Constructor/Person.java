@@ -1,4 +1,4 @@
-package Constructor;
+// package Constructor;
 
 public class Person {
     // Field
@@ -22,7 +22,7 @@ public class Person {
         // address = paramAddress;
         // name = name; // Variabel Shadowing, adalah variabel yang memiliki nama yang sama di dalam constructor itu sendiri
         // address = address; // Variabel Shadowing
-        // Jika tidak ada keyword this, onomatis memanggil variavel dari parameter constructor itu sendiri
+        // Jika tidak ada keyword this, onomatis memanggil variabel dari parameter constructor itu sendiri
 
         this.name = name; // Jika ada Keyword This, otomatis memanggil variabel yang diluar scope constructor
         this.address = address;

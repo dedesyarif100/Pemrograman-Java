@@ -1,8 +1,12 @@
 Object Oriented Programming :
 Memanggil Constructor lain menggunakan kata kunci this
 
+Static & non static method :
+Static method adalah method yang jika akan dipanggil, tidak perlu instansiasi object di dalam class main
+code : NamaClass contoh = new NamaClass;
+
 Method Overriding & Overloading :
 Overloading : Mendeklarasikan Method di Class Parentnya
-Overriding : Mendeklarasikan Methid di Class Childnya, namun sudah tidak bisa mengakses method di class parentnya
+Overriding : Mendeklarasikan Method di Class Childnya, namun sudah tidak bisa mengakses method di class parentnya
 
 Di dalam java, secara otomatis mengimport Semua jenis tipe data class itu di dalam Java.lang

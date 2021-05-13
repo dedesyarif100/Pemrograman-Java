@@ -4,48 +4,49 @@ package com.tutorial;
 
 import java.util.ArrayList;
 
-class Player{
+class Player {
     private static int numberOfPlayer;
     private static ArrayList<String> nameList = new ArrayList<String>();
     
     private String mahasiswa;
 
-    Player(String name){
+    // Constructor dengan parameter ------------------------------
+    Player(String name) {
         this.mahasiswa = name;
         Player.numberOfPlayer++;
         Player.nameList.add(this.mahasiswa);
     }
 
-    void show(){
+    void show() {
         System.out.println("Player name = " + this.mahasiswa);
     }
 
-    // static method
-    static void showNumberOfPlayer(){
+    // static method ------------------------------------
+    static void showNumberOfPlayer() {
         System.out.println(Player.numberOfPlayer);
     }
 
-    static ArrayList<String> getNames(){
+    static ArrayList<String> getNames() {
         return Player.nameList;
     }
 }
 
-class Matkul{
+class Matkul {
 
     private static ArrayList<String> matkulList = new ArrayList<String>();
 
     String mataKuliah;
 
-    Matkul(String ilkom){
+    Matkul(String ilkom) {
         this.mataKuliah = ilkom;
         Matkul.matkulList.add(this.mataKuliah);
     }
 
-    void show(){
+    void show() {
         System.out.println("Nama matkul = " + this.mataKuliah);
     }
 
-    static ArrayList<String> getMatkul(){
+    static ArrayList<String> getMatkul() {
         return Matkul.matkulList;
     }
 }

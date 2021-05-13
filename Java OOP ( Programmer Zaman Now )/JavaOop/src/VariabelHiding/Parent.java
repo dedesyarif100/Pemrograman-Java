@@ -1,4 +1,4 @@
-package VariabelHiding;
+// package VariabelHiding;
 
 public class Parent {
     String name;

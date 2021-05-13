@@ -1,5 +1,7 @@
 package AccessModifier.application;
 
+// package AccessModifier.application;
+
 // import AccessModifier.data.Product;
 // import AccessModifier.data.Data;
 
@@ -16,5 +18,9 @@ public class Application {
         System.out.println(product.price);
 
         Data data = new Data();
+
+        // Car car = new Avanza();
+        // System.out.println(car.getTier());
+        // car.drive();
     }
 }

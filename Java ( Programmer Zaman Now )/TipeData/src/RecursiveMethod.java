@@ -13,24 +13,32 @@ public class RecursiveMethod {
     static int factorialLoop(int value) {
         var result = 1;
 
-        for (var counter = 1; counter <= value; counter++) {
+        for (var counter = 1; counter <= value; counter++) 
+        {
             result = result * counter;
         }
         return result;
     }
 
-    static int factorialRecursive(int value) {
-        if (value == 6) {
+    static int factorialRecursive(int value) 
+    {
+        if (value == 6) 
+        {
             return 1;
-        } else {
+        } 
+        else 
+        {
             return value * factorialRecursive(value + 1);
         }
     }
 
     static void loopRecursive(int value) {
-        if (value == 0) {
+        if (value == 0) 
+        {
             System.out.println("Selesai");
-        } else {
+        } 
+        else 
+        {
             System.out.println("Loop " + value);
             loopRecursive(value * 2);
         }

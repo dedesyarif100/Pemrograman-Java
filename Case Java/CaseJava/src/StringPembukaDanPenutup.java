@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class App {
+public class StringPembukaDanPenutup {
 
-    void Test(String data, int indexPembuka) {
+    static void Test(String data, int indexPembuka) {
         System.out.print("Masukkan Index Pembuka : ");
         Scanner input = new Scanner(System.in);
         indexPembuka = input.nextInt();
@@ -83,10 +83,10 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-        // String data = "a (b c (d e (f) g) h) i (j k)";
-        String data = "ab (n) c d (e (f g(h i) j k) l) p q";
-        int indexPembuka = 2;
-        App case1 = new App();
+        String data = "a (b c (d e (f) g) h) i (j k)";
+        // String data = "ab (n) c d (e (f g(h i) j k) l) p q";
+        int indexPembuka = 0;
+        StringPembukaDanPenutup case1 = new StringPembukaDanPenutup();
         case1.Test(data, indexPembuka);
     }
 }
