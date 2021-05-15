@@ -1,53 +1,53 @@
 import java.util.Scanner;
 
-public class DoubleLinkedList2 {
+public class DoubleLinkedList3 {
     public static void main(String[] args) {
-        ClassCircularLinkedList3 circularLinkedList = new ClassCircularLinkedList3();
+        ClassDoubleLinkedList3 doubleLinkedList = new ClassDoubleLinkedList3();
 
         while (true) {
             System.out.print("Index Awal : ");
             Scanner rangeAwal = new Scanner(System.in);
             int awal = rangeAwal.nextInt();
 
-            System.out.print("Index Akhir : ");
+            System.out.print("Index Awal : ");
             Scanner rangeAkhir = new Scanner(System.in);
             int akhir = rangeAkhir.nextInt();
 
             if (awal > akhir) {
-                System.out.println("Nilai awal tidak boleh lebih besar dari nilai akhir");
+                System.out.println("Nilai Awal harus lebih besar dari nilai akhir\n");
             } else {
-                System.out.print("Enter ketika node mencapai angka : ");
+                System.out.print("Enter kelipatan angka : ");
                 Scanner enterNode = new Scanner(System.in);
                 int enter = enterNode.nextInt();
-                
-                System.out.println("\nDouble LinkedList : ");
+    
                 for (int a = awal; a <= akhir; a++) {
-                    circularLinkedList.tambahData(a);
+                    doubleLinkedList.tambahData(a);
                 }
-
-                ClassCircularLinkedList3 current = circularLinkedList.head;
+    
+                ClassDoubleLinkedList3 current = doubleLinkedList.head;
+                System.out.println("\nDouble Linked List : ");
+    
                 Integer n = 0;
-
                 while (true) {
-                    System.out.print(current.data);
                     n++;
+                    System.out.print(current.data);
                     if (current.next == null) {
-                        System.out.println("\nKembali Ke Nilai Awal");
+                        System.out.print("\n\nKembali Ke Index Awal : \n");
                         while (true) {
                             System.out.print(current.data);
                             if (current.prev == null) {
                                 break;
                             } else {
                                 current = current.prev;
+                                System.out.print(", ");
                             }
-                            System.out.print(", ");
                         }
                         break;
                     } else {
                         if (n == enter) {
                             n = 0;
                             current = current.next;
-                            System.out.print(", \n");
+                            System.out.println();
                         } else {
                             current = current.next;
                             System.out.print(", ");
@@ -60,28 +60,28 @@ public class DoubleLinkedList2 {
     }
 }
 
-class ClassCircularLinkedList3 {
-    ClassCircularLinkedList3 head, tail, next, prev;
+class ClassDoubleLinkedList3 {
+    ClassDoubleLinkedList3 head, tail, next, prev;
     int data;
 
-    ClassCircularLinkedList3() {
+    ClassDoubleLinkedList3() {
         head = null;
         tail = null;
         next = null;
         prev = null;
     }
 
-    ClassCircularLinkedList3(int value) {
+    ClassDoubleLinkedList3(int value) {
         data = value;
     }
 
     public void tambahData(int data) {
         if (head == null) {
-            ClassCircularLinkedList3 temp = new ClassCircularLinkedList3(data);
+            ClassDoubleLinkedList3 temp = new ClassDoubleLinkedList3(data);
             head = temp;
         } else if (head != null) {
-            ClassCircularLinkedList3 temp2 = head;
-            ClassCircularLinkedList3 temp = new ClassCircularLinkedList3(data);
+            ClassDoubleLinkedList3 temp2 = head;
+            ClassDoubleLinkedList3 temp = new ClassDoubleLinkedList3(data);
 
             while (temp2.next != null) {
                 temp2 = temp2.next;
