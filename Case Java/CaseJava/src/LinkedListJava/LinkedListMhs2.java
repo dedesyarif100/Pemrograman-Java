@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LinkedListMhs2 {
     // LinkedListMhs2 idNumber;
     public Integer id, nim, update;
-    Double uts, uas;
+    Double uts, uas, rata2_uts, rata2_uas, nilai_akhir;
     String nama, alamat, skill;
     LinkedListMhs2 next, prev;
     
@@ -27,10 +27,20 @@ public class LinkedListMhs2 {
         uts = doubleValue.nextDouble();
         System.out.print("Masukkan Nilai UAS    : ");
         uas = doubleValue.nextDouble();
+        rata2_uts = (30.0 / 100) * uts;
+        rata2_uas = (70.0 / 100) * uas;
+        nilai_akhir = uts + uas;
+        System.out.println("cek uts : " + rata2_uts);
+        System.out.println("cek uas : " + rata2_uas);
+        System.out.println("cek NA : " + nilai_akhir);
     }
 
     public void viewData() {
-        System.out.println("| "+ id +" | "+ nim +" | "+ nama +" | "+ alamat +" | "+ skill +" | "+ uts +" | "+ uas +" | ");
+        System.out.println("| "+ id +" | "+ nim +" | "+ nama +" | "+ alamat +" | "+ skill +" | "+ uts +" | "+ uas +" | "+ nilai_akhir +" |");
+    }
+
+    public void viewDataByNilaiAkhir() {
+
     }
 
     public int inputIDupdate() {
@@ -53,6 +63,12 @@ public class LinkedListMhs2 {
         selectData.uts = doubleValue.nextDouble();
         System.out.print("Masukkan Nilai UAS    : ");
         selectData.uas = doubleValue.nextDouble();
+        // selectData.rata2_uts = (30.0 / 100) * selectData.uts;
+        // selectData.rata2_uas = (70.0 / 100) * selectData.uas;
+        // selectData.nilai_akhir = selectData.uts + selectData.uas;
+        // System.out.println("cek UTS : " + selectData.rata2_uts);
+        // System.out.println("cek UAS : " + selectData.rata2_uas);
+        // System.out.println("cek NA : " + selectData.nilai_akhir);
     }
 
     public void remove(LinkedListMhs2 selectData) {
@@ -111,11 +127,13 @@ public class LinkedListMhs2 {
 }
 
 class LinkedList2 {
-    LinkedListMhs2 head, tail;
+    LinkedListMhs2 head, tail, next, prev;
     Integer id;
     public LinkedList2() { // Constructor
         head = null;
         tail = null;
+        next = null;
+        prev = null;
     }
 
     public void add(int idNumber) {
@@ -130,23 +148,74 @@ class LinkedList2 {
     }
 
     public void view(int id) {
-        id = head.id;
         if (head == null) {
             System.out.println("Data Kosong");
             System.out.println("------------------------------------\n");
             return;
         } else {
-            System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS |");
-            System.out.println("------------------------------------");
-            LinkedListMhs2 viewData = head;
-            while (viewData != null) {
-                viewData.viewData();
-                viewData = viewData.next;
-                id++;
+            id = head.id;
+            int menuView = 0;
+            LinkedList2 sendView = new LinkedList2();
+            while (menuView <= 3) {
+                System.out.print("\n1. View Berdasarkan ID\n2. View Berdasarkan Nilai Akhir\n");
+                System.out.print("Masukkan Menu : ");
+                Scanner integer = new Scanner(System.in);
+                menuView = integer.nextInt();
+                if (menuView == 1) {
+                    System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS | NILAI AKHIR |");
+                    System.out.println("------------------------------------");
+                    LinkedListMhs2 viewData = head;
+                    while (viewData != null) {
+                        viewData.viewData();
+                        viewData = viewData.next;
+                        id++;
+                    }
+                    System.out.println("View Data Selesai");
+                    System.out.println("-----------------------------------------\n");
+                    System.out.println("Cek Id Number di View : " + id);
+                } else if (menuView == 2) {
+                    System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS | NILAI AKHIR |");
+                    System.out.println("------------------------------------");
+                    LinkedListMhs2 viewData = head;
+                    while (viewData != null) {
+                        if (viewData.id == 1) {
+                            System.out.println("Jika ID 1");
+                            viewData.viewData();
+                            viewData = viewData.next;
+                            viewData = viewData.next;
+                            System.out.println("Cek ID : " + viewData.id);
+                            // System.out.println("Cek Prev NA : " + viewData.prev.nilai_akhir);
+                        }
+                        else if (viewData.prev.nilai_akhir > viewData.nilai_akhir) {
+                            // System.out.println(viewData.prev.nilai_akhir);
+                            System.out.println("Nilai Terendah");
+                            viewData.viewData();
+                            viewData = viewData.next;
+                            // id++;
+                        } 
+                        else if (viewData.prev.nilai_akhir < viewData.nilai_akhir) {
+                            System.out.println("Nilai Tertinggi");
+                            LinkedListMhs2 viewAgain = head;
+                            while (viewAgain != null) {
+                                if (viewAgain.nilai_akhir < viewData.nilai_akhir) {
+                                    LinkedListMhs2 tampung;
+                                    tampung = viewAgain;
+                                    viewAgain = viewData;
+                                    viewData = tampung;
+                                    viewAgain = viewAgain.next;
+                                } else {
+                                    viewAgain = viewAgain.next;
+                                }
+                            }
+                            viewData.viewData();
+                            // viewData = viewData.next;
+                            // id++;
+                        }
+                    }
+                } else {
+                    System.out.println("Menu tidak tersedia");
+                }
             }
-            System.out.println("View Data Selesai");
-            System.out.println("-----------------------------------------\n");
-            System.out.println("Cek Id Number di View : " + id);
         }
     }
 
@@ -162,9 +231,9 @@ class LinkedList2 {
             LinkedListMhs2 selectData = head;
             while (selectData != null) {
                 if (selectData.id == save) {
-                    System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS |");
+                    System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS | NILAI AKHIR |");
                     System.out.println("------------------------------------");
-                    System.out.println("| "+ selectData.id +" | "+ selectData.nim +" | "+ selectData.nama +" | "+ selectData.alamat +" | "+ selectData.skill +" | "+ selectData.uts +" | "+ selectData.uas +" | ");
+                    System.out.println("| "+ selectData.id +" | "+ selectData.nim +" | "+ selectData.nama +" | "+ selectData.alamat +" | "+ selectData.skill +" | "+ selectData.uts +" | "+ selectData.uas +" | "+ selectData.nilai_akhir +" |");
                     System.out.println("Berhasil Masuk Pengujian");
                     System.out.println("Update Data : ");
                     send.InputUpdateData(selectData);
@@ -186,9 +255,9 @@ class LinkedList2 {
             System.out.println("------------------------------------\n");
             return;
         } else {
-            System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS |");
+            System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS | NILAI AKHIR |");
             System.out.println("------------------------------------");
-            System.out.println("| "+ head.id +" | "+ head.nim +" | "+ head.nama +" | "+ head.alamat +" | "+ head.skill +" | "+ head.uts +" | "+ head.uas +" |");
+            System.out.println("| "+ head.id +" | "+ head.nim +" | "+ head.nama +" | "+ head.alamat +" | "+ head.skill +" | "+ head.uts +" | "+ head.uas +" | "+ head.nilai_akhir +" |");
             System.out.println("Data "+ head.id +" Berhasil Dihapus");
             System.out.println("Cek Data Head.Next : " + head.next.id);
             System.out.println("Cek Data Head : " + head.id);
@@ -205,9 +274,9 @@ class LinkedList2 {
             System.out.println("------------------------------------\n");
             return;
         } else if (head == tail) {
-            System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS |");
+            System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS | NILAI AKHIR");
             System.out.println("------------------------------------");
-            System.out.println("| "+ tail.id +" | "+ tail.nim +" | "+ tail.nama +" | "+ tail.alamat +" | "+ tail.skill +" | "+ tail.uts +" | "+ tail.uas +" |");
+            System.out.println("| "+ tail.id +" | "+ tail.nim +" | "+ tail.nama +" | "+ tail.alamat +" | "+ tail.skill +" | "+ tail.uts +" | "+ tail.uas +" | "+ tail.nilai_akhir +" |");
             System.out.println("Data "+ tail.id +" Berhasil Dihapus");
             head = null;
             tail = null;
@@ -216,7 +285,7 @@ class LinkedList2 {
         } else {
             System.out.println("| ID | NIM | Nama | Alamat | Skill | UTS | UAS |");
             System.out.println("------------------------------------");
-            System.out.println("| "+ tail.id +" | "+ tail.nim +" | "+ tail.nama +" | "+ tail.alamat +" | "+ tail.skill +" | "+ tail.uts +" | "+ tail.uas +" |");
+            System.out.println("| "+ tail.id +" | "+ tail.nim +" | "+ tail.nama +" | "+ tail.alamat +" | "+ tail.skill +" | "+ tail.uts +" | "+ tail.uas +" | "+ tail.nilai_akhir +" |");
             System.out.println("Data "+ tail.id +" Berhasil Dihapus");
             System.out.println("Data Terakhir Berhasil Dihapus");
             System.out.println("------------------------------------\n");

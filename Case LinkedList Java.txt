@@ -1,0 +1,43 @@
+Case LinkedList Java :
+1. Create Data
+	- Data Mahasiswa	: id_mahasiswa, nim_dosen, nama, alamat_mahasiswa, skill, nilai_uts, nilai_uas, average
+	- Data Dosen		: id_dosen, nim_dosen, nama_dosen, alamat_dosen
+	- Data MataKuliah	: id_matkul, nama_matkul, bobot_matkul
+	- Data Relasi Perusahaan: id_perusahaan, nama_perusahaan, alumni
+	- Data Alumni Universitas: id_alumni, nama_alumni, tahun_masuk, tahun_lulus, judul_skripsi, IPK
+2. View Data
+	- View Mahasiswa
+	- View Dosen
+	- View MataKuliah
+	- View Relasi Perusahaan
+	- View Alumni Universitas
+3. Update Data
+	- Update Mahasiswa
+	- Update Dosen
+	- Update MataKuliah
+	- Update Relasi Perusahaan
+	- Update Alumni Universitas
+4. Delete Data
+	- Delete Mahasiswa
+	- Delete Dosen
+	- Delete MataKuliah
+	- Delete Relasi Perusahaan
+	- Delete Alumni Universitas
+5. Exit
+
+Pr Case : 
+1. Delete Data Berdasarkan ID
+2. Average Total Nilai ( uts, uas, IPK )
+3. ID otomatis terbuat ( Increment )
+4. 
+
+uts = 24, uas = 49
+uts = 30/100 * nilai uts
+uas = 70/100 * nilai uas
+
+id 1, avg = 185.44 -> id 1, avg = 56.55
+
+44, 44
+48.4, 49
+38, 37
+50, 51
