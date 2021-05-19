@@ -7,12 +7,14 @@ public class LinkedListMhs2 {
     public Integer id, nim, update;
     Double uts, uas, rata2_uts, rata2_uas, nilai_akhir;
     String nama, alamat, skill;
-    LinkedListMhs2 next, prev;
+    LinkedListMhs2 prev, next;
+    // LinkedListMhs2 ;
     
     static Scanner integer = new Scanner(System.in);
     Scanner string = new Scanner(System.in);
     Scanner doubleValue = new Scanner(System.in);
     public void inputData(Integer idNumber) {
+        // System.out.println(next);
         System.out.print("ID TERBUAT OTOMATIS   : " + (id = idNumber) + "\n");
         id = idNumber;
         System.out.print("Masukkan Nim          : ");
@@ -63,9 +65,9 @@ public class LinkedListMhs2 {
         selectData.uts = doubleValue.nextDouble();
         System.out.print("Masukkan Nilai UAS    : ");
         selectData.uas = doubleValue.nextDouble();
-        // selectData.rata2_uts = (30.0 / 100) * selectData.uts;
-        // selectData.rata2_uas = (70.0 / 100) * selectData.uas;
-        // selectData.nilai_akhir = selectData.uts + selectData.uas;
+        selectData.rata2_uts = (30.0 / 100) * selectData.uts;
+        selectData.rata2_uas = (70.0 / 100) * selectData.uas;
+        selectData.nilai_akhir = selectData.uts + selectData.uas;
         // System.out.println("cek UTS : " + selectData.rata2_uts);
         // System.out.println("cek UAS : " + selectData.rata2_uas);
         // System.out.println("cek NA : " + selectData.nilai_akhir);
@@ -86,6 +88,7 @@ public class LinkedListMhs2 {
     public static void main(String[] args) {
         int menu = 0, id = 1, delete;
         LinkedList2 inputMenu = new LinkedList2();
+        System.out.println("Cek");
         while (menu != 5 && menu <= 5) {
             System.out.print("1. Input\n2. View\n3. Update\n4. Delete\n5. Exit\n");
             System.out.print("Masukkan Menu : ");
@@ -128,6 +131,7 @@ public class LinkedListMhs2 {
 
 class LinkedList2 {
     LinkedListMhs2 head, tail, next, prev;
+
     Integer id;
     public LinkedList2() { // Constructor
         head = null;
@@ -138,13 +142,22 @@ class LinkedList2 {
 
     public void add(int idNumber) {
         LinkedListMhs2 addData = new LinkedListMhs2();
+        LinkedListMhs2 tm = new LinkedListMhs2();
         addData.inputData(idNumber);
         if (head == null) {
             head = addData;
+            tail = addData;
         } else {
+            tm = tail;
             tail.next = addData;
+            tail = addData;
+            tail.prev = tm;
         }
-        tail = addData;
+        // if (head.next != null) {
+        //     System.out.println(" Cek id : " + tail.prev.id);
+        //     System.out.println(" Cek tail : " + tail);
+        //     System.out.println(" Cek Next : " + head.next);
+        // }
     }
 
     public void view(int id) {
@@ -170,6 +183,7 @@ class LinkedList2 {
                         viewData = viewData.next;
                         id++;
                     }
+                    // System.out.println(viewData.prev.prev.id);
                     System.out.println("View Data Selesai");
                     System.out.println("-----------------------------------------\n");
                     System.out.println("Cek Id Number di View : " + id);
@@ -182,7 +196,6 @@ class LinkedList2 {
                             System.out.println("Jika ID 1");
                             viewData.viewData();
                             viewData = viewData.next;
-                            viewData = viewData.next;
                             System.out.println("Cek ID : " + viewData.id);
                             // System.out.println("Cek Prev NA : " + viewData.prev.nilai_akhir);
                         }
@@ -194,8 +207,11 @@ class LinkedList2 {
                             // id++;
                         } 
                         else if (viewData.prev.nilai_akhir < viewData.nilai_akhir) {
+                            System.out.println(" Cek View : " + viewData.id);
                             System.out.println("Nilai Tertinggi");
                             LinkedListMhs2 viewAgain = head;
+                            System.out.println(viewAgain.id);
+                            // break;
                             while (viewAgain != null) {
                                 if (viewAgain.nilai_akhir < viewData.nilai_akhir) {
                                     LinkedListMhs2 tampung;
@@ -203,12 +219,15 @@ class LinkedList2 {
                                     viewAgain = viewData;
                                     viewData = tampung;
                                     viewAgain = viewAgain.next;
+                                    System.out.println(" if : " + viewData.id);
                                 } else {
                                     viewAgain = viewAgain.next;
+                                    System.out.println(" else : " + viewAgain.id);
                                 }
                             }
                             viewData.viewData();
-                            // viewData = viewData.next;
+                            viewData = viewData.next;
+                            System.out.println(" Cek View : " + viewData.id);
                             // id++;
                         }
                     }
