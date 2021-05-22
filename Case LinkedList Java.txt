@@ -2,9 +2,9 @@ Case LinkedList Java :
 1. Create Data
 	- Data Mahasiswa	: id_mahasiswa, nim_dosen, nama, alamat_mahasiswa, skill, nilai_uts, nilai_uas, average
 	- Data Dosen		: id_dosen, nim_dosen, nama_dosen, alamat_dosen
-	- Data MataKuliah	: id_matkul, nama_matkul, bobot_matkul
-	- Data Relasi Perusahaan: id_perusahaan, nama_perusahaan, alumni
-	- Data Alumni Universitas: id_alumni, nama_alumni, tahun_masuk, tahun_lulus, judul_skripsi, IPK
+	- Data MataKuliah	: id_matkul, kode_matkul, nama_matkul, bobot_matkul
+	- Data Relasi Perusahaan: id_perusahaan, nama_perusahaan, nama_alumni
+	- Data Alumni Universitas: id_alumni, nim_alumni, nama_alumni, tahun_masuk, tahun_lulus, judul_skripsi, IPK
 2. View Data
 	- View Mahasiswa
 	- View Dosen
