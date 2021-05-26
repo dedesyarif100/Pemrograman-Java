@@ -1,8 +1,13 @@
 {
     "java.project.sourcePaths": [
         "Method/src/com/tutorial",
+        "Method/src/com",
+        "JavaStudiKasusOOPTodoList/Todolist/src/testservice",
+        "JavaStudiKasusOOPTodoList/Todolist/src",
         "JavaLogicAndMethod/src/files",
+        "JavaGeneric ( Programmer Zaman Now )/programmer.zaman.now.generic/src/programmer.zaman.now.generic/application",
+        "Java Standart Classes/numberApp.java/src",
         "Case Java/CaseJava/src",
-        "Method/src/com"
+        "JavaGeneric ( Programmer Zaman Now )/programmer.zaman.now.generic/src/programmerZamanNowGeneric/application"
     ]
 }
