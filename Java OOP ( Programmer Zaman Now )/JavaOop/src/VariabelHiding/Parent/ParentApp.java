@@ -1,3 +1,4 @@
+package Parent;
 // package VariabelHiding;
 
 public class ParentApp {
@@ -5,10 +6,10 @@ public class ParentApp {
         Child child = new Child();
         child.name = "Eko";
         child.Wordl();
-        System.out.println(child.name);
+        // System.out.println(child.name);
 
         Parent parent = (Parent) child;
         parent.Wordl();
-        System.out.println(parent.name);
+        // System.out.println(parent.name);
     }    
 }

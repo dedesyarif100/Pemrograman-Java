@@ -9,6 +9,6 @@ public class Employee {
     }
 
     void sayHello(String name) {
-        System.out.println("Hi " + name + ", My Name Is Employee " + this.name);
+        System.out.println("Hi " + name + ", My Name Is Employee " + name);
     }
 }

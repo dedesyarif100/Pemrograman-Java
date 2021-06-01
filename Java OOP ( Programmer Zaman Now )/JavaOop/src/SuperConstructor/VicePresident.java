@@ -1,6 +1,6 @@
 package SuperConstructor;
 
-class VicePresident extends Manager {
+class VicePresident extends ManagerSuperConstructor {
 
     // Super Constructor
     // Constructor ini wajib dibuat di class Child, jika tidak maka akan menyebabkan error

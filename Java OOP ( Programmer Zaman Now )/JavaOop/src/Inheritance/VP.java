@@ -1,9 +1,9 @@
 
 
-class VicePresident extends Manager {
+class VP extends ManagerInheritance {
 
     // Super Constructor
-    VicePresident(String name){
+    VP(String name){
         super(name);
     }
     // Method Overriding, adalah method yang dipanggil di class Child dari class Parent

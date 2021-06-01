@@ -1,14 +1,14 @@
 // package SuperConstructor;
 
-public class Manager {
+public class ManagerSuperConstructor {
     String name;
     String company;
     // Constructor
-    Manager(String name){
+    ManagerSuperConstructor(String name){
         this.name = name;
     }
 
-    Manager(String name, String company){
+    ManagerSuperConstructor(String name, String company){
         this.name = name;
         this.company = company;
     }

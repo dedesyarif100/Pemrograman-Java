@@ -6,8 +6,15 @@
         "JavaStudiKasusOOPTodoList/Todolist/src",
         "JavaLogicAndMethod/src/files",
         "JavaGeneric ( Programmer Zaman Now )/programmer.zaman.now.generic/src/programmerZamanNowGeneric/application",
-        "Java Standart Classes/numberApp.java/src",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/VariabelHiding",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/SuperKeyword",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/Polimorfisme",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/Inheritance",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/Constructor",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/AccessModifier",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/Abstract",
+        "Java Collection ( Programmer Zaman Now )/App/src",
         "Case Java/CaseJava/src",
-        "Java Collection ( Programmer Zaman Now )/App/src"
+        "Java Dasar ( Programmer Zaman Now )/TipeData/src"
     ]
 }

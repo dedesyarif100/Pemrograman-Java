@@ -2,13 +2,13 @@
 
 public class ManagerApp {
     public static void main(String[] args) {
-        var manager = new Manager("manager test");
+        ManagerInheritance manager = new ManagerInheritance("manager test");
         manager.name = "Dede";
 
         // Method Overloading, adalah method yang dipanggil di class dirinya sendiri ( Class Parent )
         manager.sayHello("Budi");
 
-        var vp = new VicePresident("Vice President test");
+        VP vp = new VP("Vice President test");
         vp.name = "Hendro";
 
         // Method Overriding, adalah method yang dipanggil di class Child dari class Parent
