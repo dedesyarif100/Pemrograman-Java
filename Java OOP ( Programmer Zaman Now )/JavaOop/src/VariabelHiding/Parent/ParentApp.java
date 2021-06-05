@@ -1,4 +1,9 @@
 package Parent;
+
+// import SuperKeyword.Employee;
+import Fruits.*;
+// import Fruits.Fruits;
+// import Fruits.FruitsApp;
 // package VariabelHiding;
 
 public class ParentApp {
@@ -10,6 +15,19 @@ public class ParentApp {
 
         Parent parent = (Parent) child;
         parent.Wordl();
+
+        // Rectangle shape = new Rectangle();
+
+        hallo hallo = new hallo();
+
+        Fruits fruits = new Fruits();
+        fruits.Buah();
+
+        FruitsApp fruitsApp = new FruitsApp();
+        fruitsApp.apply();
         // System.out.println(parent.name);
+
+        // Employee sape = new Employee();
+        // sape.sayHello();
     }    
 }

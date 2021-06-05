@@ -6,5 +6,8 @@ public class ProductApp {
         System.out.println(product.idCustomers);
         System.out.println(product.name);
         System.out.println(product.price);
+
+        System.out.println("-----------------------------------");
+        System.out.println(product);
     }
 }

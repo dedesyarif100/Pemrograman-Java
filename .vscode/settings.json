@@ -8,13 +8,19 @@
         "JavaGeneric ( Programmer Zaman Now )/programmer.zaman.now.generic/src/programmerZamanNowGeneric/application",
         "Java OOP ( Programmer Zaman Now )/JavaOop/src/VariabelHiding",
         "Java OOP ( Programmer Zaman Now )/JavaOop/src/SuperKeyword",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/StaticKeyword",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/RecordClass",
         "Java OOP ( Programmer Zaman Now )/JavaOop/src/Polimorfisme",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/InnerClass",
         "Java OOP ( Programmer Zaman Now )/JavaOop/src/Inheritance",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/EnumClass",
         "Java OOP ( Programmer Zaman Now )/JavaOop/src/Constructor",
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/AnonymousClass",
         "Java OOP ( Programmer Zaman Now )/JavaOop/src/AccessModifier",
         "Java OOP ( Programmer Zaman Now )/JavaOop/src/Abstract",
+        "Java Dasar ( Programmer Zaman Now )/TipeData/src",
         "Java Collection ( Programmer Zaman Now )/App/src",
         "Case Java/CaseJava/src",
-        "Java Dasar ( Programmer Zaman Now )/TipeData/src"
+        "Java OOP ( Programmer Zaman Now )/JavaOop/src/Exception"
     ]
 }

@@ -14,4 +14,8 @@ public class Product {
     public Product() {
         // this.idCustomers = idCustomers;
     }
+
+    public String toString() { // Method To String
+        return "ID : " + idCustomers + "\nProduct Name : " + name + "\nPrice : " + price;
+    }
 }

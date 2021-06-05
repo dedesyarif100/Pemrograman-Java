@@ -8,4 +8,8 @@ public class FruitsApp {
         buah.price = 15.123;
         buah.Buah();
     }
+
+    public void apply() {
+        System.out.println("Apply nama");
+    }
 }
